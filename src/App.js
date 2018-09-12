@@ -18,3 +18,6 @@ class App extends Component {
 }
 
 export default App;
+
+
+// https://github.com/WDI-SEA/react_intro_global/blob/master/12-film-1-components.md
