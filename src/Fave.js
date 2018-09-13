@@ -15,9 +15,11 @@ export default class Fave extends Component {
 		})
 		console.log('Handling fave click');
 	}
+
 	render() {
+		const toQueue = this.props.isFave ? "remove_from_queue" : "add_to_queue";  
 		return (
-			<div className="film-row-fave add_to_queue" conClick={this.handleClick}>
+			<div className={`film-row-fave ${toQueue}`} conClick={this.handleClick}>
   			<p className="material-icons">add_to_queue</p>
 </div>
 		);
