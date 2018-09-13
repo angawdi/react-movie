@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import FilmRow from './FilmRow';
 
 export default class FilmListing extends Component {
+	constructor(props){
+		super();
+		this.state = {
+			filter: 'all'
+		}
+	}
+
 	handleFilterClick = (filter) => {
 		console.log('setting filter to ', filter);
 	} 
