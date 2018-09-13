@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 export default class Fave extends Component {
 	handleClick = (e) => {
+		e.stopPropagation();
 		console.log('Handling fave click');
 	}
 	render() {
