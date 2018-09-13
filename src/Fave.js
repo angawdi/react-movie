@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 export default class Fave extends Component {
+	constructor(props) {
+		super();
+	}
+
 	handleClick = (e) => {
 		e.stopPropagation();
 		console.log('Handling fave click');
