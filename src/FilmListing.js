@@ -10,6 +10,9 @@ export default class FilmListing extends Component {
 	}
 
 	handleFilterClick = (filter) => {
+		this.setState({
+			filter: filter
+		});
 		console.log('setting filter to ', filter);
 	} 
 	render() {
