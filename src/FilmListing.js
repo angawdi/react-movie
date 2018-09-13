@@ -6,12 +6,28 @@ export default class FilmListing extends Component {
 		console.log('setting filter to ', filter);
 	} 
 	render() {
-		const allFilms = this.props.films.map( (film) => (<FilmRow film={film}/>));
+		let allFilms = this.props.films.map( film => {
+			return (
+				<FilmRow film={film} />
+			);
+		});
 		return (
-			<div className="film-list">
-				<h1 className="section-title">FILMS</h1>
-				<h1>{allFilms}</h1>
-			</div>
+		<div className="film-list">
+    		<h1 className="section-title">FILMS</h1>
+    		<div className="film-list-filters">
+        		<div className="film-list-filter">
+        			ALL
+            		<span className="section-count">{this.props.films.length}</span>
+        		</div>
+
+        	<div className="film-list-filter" onClick= { () => this.handleFilterClick('faves')}>
+            FAVES
+            <span className="section-count">0</span>
+        	</div>
+    	</div>
+
+    	{allFilms}
+    	</div>
 		);
 	}
 }
