@@ -8,7 +8,7 @@ export default class FilmRow extends Component {
 	}
 	render() {
 		return (
-			<div className="film-row">
+			<div className="film-row" onClick={this.handleDetailsClick}>
 	  			<FilmPoster film={this.props.film} />
  				<div className="film-summary">
    					<h1>{this.props.film.title}</h1>
