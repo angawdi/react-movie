@@ -6,10 +6,13 @@ export default class FilmListing extends Component {
 		super(props);
 		this.state = {
 			filter: 'all',
+			faves: []
 		}
 	}
 
-	handleFaveToggle = (films) => {}
+	handleFaveToggle = (films) => {
+		const faves = this.state.faves.slice();
+	}
 
 	handleFilterClick = (filter) => {
 		this.setState({
