@@ -3,7 +3,7 @@ import FilmRow from './FilmRow';
 
 export default class FilmListing extends Component {
 	constructor(props){
-		super();
+		super(props);
 		this.state = {
 			filter: 'all'
 		}
