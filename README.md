@@ -9,3 +9,5 @@ This project was created with `create-react-app`. Once you have the app cloned, 
 This is a repo that houses the base code for a React.js film application. By the final stage of the project, the film app will have a list of all the recent popular movies; a user can scroll through them, click one for more details, and save it to their favorites.
 
 ![](bladerunner.png)
+
+https://github.com/WDI-SEA/react_intro_global/blob/master/12-film-1-components.md
