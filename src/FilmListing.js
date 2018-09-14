@@ -5,9 +5,11 @@ export default class FilmListing extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			filter: 'all'
+			filter: 'all',
 		}
 	}
+
+	handleFaveToggle = (films) => {}
 
 	handleFilterClick = (filter) => {
 		this.setState({
