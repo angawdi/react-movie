@@ -12,6 +12,7 @@ export default class FilmListing extends Component {
 
 	handleFaveToggle = (films) => {
 		const faves = this.state.faves.slice();
+		const filmIndex = faves.indexOf(film);
 	}
 
 	handleFilterClick = (filter) => {
