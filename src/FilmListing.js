@@ -10,9 +10,18 @@ export default class FilmListing extends Component {
 		}
 	}
 
-	handleFaveToggle = (films) => {
-		const faves = this.state.faves.slice();
-		const filmIndex = faves.indexOf(film);
+	handleFaveToggle = (film) => {
+		const newFaves = this.state.faves.slice();
+		const filmIndex = this.state.faves.indexOf(film);
+		console.log("filmIndex", filmIndex);
+		if(filmIndex < 0) {
+			console.log(`Adding ${film.title} to faves...`);
+			newFaves.push(film);
+		} else {
+			newFaves.splice(filmIndex, 1);
+			console.log(`Removing ${film.title} from faves...`);
+		}
+		this.setState({faves: newFaves});
 	}
 
 	handleFilterClick = (filter) => {
@@ -31,7 +40,7 @@ export default class FilmListing extends Component {
 		<div className="film-list">
     		<h1 className="section-title">FILMS</h1>
     		<div className="film-list-filters">
-        		<div className={`film-list-filter${this.state.filter === 'all' ? 'is-active' : ''}`} onClick= {() => this.handleFilterClick('all')}>
+        		<div className={`film-list-filter ${this.state.filter === 'all' ? 'is-active' : ''}`} onClick= {() => this.handleFilterClick('all')}>
         			ALL
             		<span className="section-count">{this.props.films.length}</span>
         		</div>
